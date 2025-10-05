@@ -1,5 +1,6 @@
 import json
 import os
+from utils import limpiar_pantalla
 
 ruta_registro = os.path.join(os.path.dirname(__file__), "usuarios.json")
 
@@ -57,7 +58,7 @@ if __name__ == "__main__":
 
     while True:
         opcion = menuCampers()
-
+        limpiar_pantalla()
         if opcion == "1":
             verNotas(usuarios, usuario_actual)
         elif opcion == "2":
@@ -66,3 +67,8 @@ if __name__ == "__main__":
             verScore(usuarios, usuario_actual)
         elif opcion == "4":
             consultarRiesgo(usuarios, usuario_actual)
+        elif opcion == "5":
+            print("Saliendo del menú campers.")
+            break
+        input("\nPresiona ENTER para continuar...")
+        limpiar_pantalla()

@@ -1,0 +1,44 @@
+{
+    "Lunes": {
+        "06:00 - 10:00": "Descanso/Libre",
+        "10:00 - 14:00": "Descanso/Libre",
+        "14:00 - 18:00": "Descanso/Libre",
+        "18:00 - 22:00": "programacion"
+    },
+    "Martes": {
+        "06:00 - 10:00": "Descanso/Libre",
+        "10:00 - 14:00": "ser",
+        "14:00 - 18:00": "Descanso/Libre",
+        "18:00 - 22:00": "Descanso/Libre"
+    },
+    "Mi\u00e9rcoles": {
+        "06:00 - 10:00": "Descanso/Libre",
+        "10:00 - 14:00": "fundamentos de programacion",
+        "14:00 - 18:00": "introduccion python",
+        "18:00 - 22:00": "introduccion python 1"
+    },
+    "Jueves": {
+        "06:00 - 10:00": "introduccion python 2",
+        "10:00 - 14:00": "introduccion python 3",
+        "14:00 - 18:00": "introduccion python 4",
+        "18:00 - 22:00": "proyecto python"
+    },
+    "Viernes": {
+        "06:00 - 10:00": "proyecto python dia 1",
+        "10:00 - 14:00": "proyecot python dia 2",
+        "14:00 - 18:00": "proyecto python dia 3",
+        "18:00 - 22:00": "Descanso/Libre"
+    },
+    "S\u00e1bado": {
+        "06:00 - 10:00": "Descanso/Libre",
+        "10:00 - 14:00": "Descanso/Libre",
+        "14:00 - 18:00": "Descanso/Libre",
+        "18:00 - 22:00": "Descanso/Libre"
+    },
+    "Domingo": {
+        "06:00 - 10:00": "Descanso/Libre",
+        "10:00 - 14:00": "Descanso/Libre",
+        "14:00 - 18:00": "Descanso/Libre",
+        "18:00 - 22:00": "Descanso/Libre"
+    }
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Aurum",
+        "password": "Au_rumD*",
+        "estado": "activo",
+        "riesgo": "N/A",
+        "rol": "admin"
+    },
+    {
+        "nombre": "miku",
+        "password": "1234",
+        "estado": "activo",
+        "riesgo": "N/A",
+        "rol": "trainer"
+    },
+    {
+        "nombre": "esteban",
+        "password": "123",
+        "estado": "activo",
+        "riesgo": "N/A",
+        "rol": "camper"
+    }
+]

@@ -1,26 +1,13 @@
 from login import login_main
-from menuAdmin import *
+from menuTrainers import *
 from menuCampers import *
-from menuTrainers import *     
-
-ruta_archivo_admin = os.path.join(os.path.dirname(__file__), "usuarios.json")
-
-def cargarUsuarios():
-    try:
-        with open(ruta_admin, "r") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
+from menuAdmin import *
+from utils import limpiar_pantalla
 
 if __name__ == "__main__":
-    login_main()
-
-if "rol" == "admin":
-    menuAdmin()
-elif "rol" == "camper":
-    menuCampers()
-elif "rol" == "trainer":
-    menuTrainers()
-
-
-
+    try:
+        limpiar_pantalla(pausa=1)
+        login_main()
+    except Exception as e:
+        print(f"Ocurrió un error inesperado: {e}")
+        input("Presiona ENTER para salir...")

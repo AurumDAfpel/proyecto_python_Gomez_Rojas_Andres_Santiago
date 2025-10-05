@@ -1,17 +1,45 @@
 [
     {
-        "nombre": "Aurum",
-        "password": "Au_rumD*",
-        "estado": "N/A",
+        "id": "001",
+        "nombre": "andres",
+        "apellidos": "gomez",
+        "direccion": "xd",
+        "acudiente": "nose",
+        "telefono_celular": "1000",
+        "telefono_fijo": "10000",
+        "estado": "En proceso de ingreso",
         "riesgo": "N/A",
-        "rol": "admin"  
+        "rol": "camper",
+        "rutas": [
+            {
+                "id": 2,
+                "ruta": "Java",
+                "descripcion": "Curso de Java"
+            }
+        ],
+        "tareas": [
+            ""
+        ]
     },
     {
-        "nombre": "carlos",
-        "password": "123456",
-        "estado": "activo",
+        "id": "002",
+        "nombre": "kata",
+        "apellidos": "gomez",
+        "direccion": "nose",
+        "acudiente": "+18",
+        "telefono_celular": "si",
+        "telefono_fijo": "a",
+        "estado": "inscrito",
         "riesgo": "bajo",
         "rol": "camper"
-        
+    },
+    {
+        "id": "001",
+        "nombre": "miku",
+        "apellidos": "hatsune",
+        "especialidad": "java",
+        "telefono_celular": "10921",
+        "telefono_fijo": "312",
+        "rol": "trainer"
     }
 ]
