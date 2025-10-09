@@ -4,6 +4,23 @@ from utils import limpiar_pantalla
 
 ruta_usuarios = os.path.join(os.path.dirname(__file__), "usuarios.json")
 ruta_notas = os.path.join(os.path.dirname(__file__), "notasCampers.json")
+ruta_rutas = os.path.join(os.path.dirname(__file__), "rutas.json")
+ruta_registro_trainer = os.path.join(os.path.dirname(__file__), "registroTrainers.json")
+
+def cargar_registro_t():
+    try:
+        with open (ruta_registro_trainer, "r", encoding="utf-8") as archivoT:
+            return json.load(archivoT)
+    except FileNotFoundError:
+        return []
+        
+
+def cargar_rutas():
+    try: 
+        with open (ruta_rutas, "r", encoding="utf-8") as archivoR :
+            return json.load(archivoR)
+    except FileNotFoundError:
+        return []
 
 def cargar_usuarios():
     try:
@@ -14,8 +31,8 @@ def cargar_usuarios():
 
 def cargar_notas():
     try:
-        with open(ruta_notas, "r", encoding="utf-8") as archivo:
-            return json.load(archivo)
+        with open(ruta_notas, "r", encoding="utf-8") as archivoN:
+            return json.load(archivoN)
     except FileNotFoundError:
         return {}
 
@@ -45,15 +62,16 @@ def listar_campers_aprobados():
 
 def listar_trainers_activos():
     limpiar_pantalla()
-    usuarios = cargar_usuarios()
-    trainers = [u for u in usuarios if u.get("rol") == "trainer" and u.get("estado") == "activo"]
+    usuarios = cargar_usuarios()  
+    trainers = [u for u in usuarios if u.get("rol") == "trainer"]
 
-    print("\n--- Entrenadores activos ---")
+    print("\n--- trainers activos ---")
     if trainers:
         for t in trainers:
-            print(f"- {t['nombre']} {t['apellidos']} | Ruta: {t.get('ruta', 'Sin asignar')}")
+            print(f"- {t['id']} {t['nombre']} {t['apellidos']} | Ruta: {t.get('ruta', 'Sin asignar')}")
     else:
-        print("No hay entrenadores activos en este momento.")
+        print("No hay trainers activos en este momento.")
+    input("\n Presiona ENTER para continuar...")
 
 def campers_bajo_rendimiento():
     limpiar_pantalla()
@@ -93,6 +111,7 @@ def campers_y_trainers_por_ruta():
         print(f"\n📘 Ruta: {ruta}")
         print(" Trainers:", ", ".join(datos["trainers"]) if datos["trainers"] else "Ninguno")
         print(" Campers:", ", ".join(datos["campers"]) if datos["campers"] else "Ninguno")
+    input("\nPresione ENTER para continuar...")
 
 def resultados_por_modulo():
     limpiar_pantalla()
@@ -121,7 +140,7 @@ def verReportes():
     print("\n--- Menú de Reportes ---")
     print("1. listar campers inscritos")
     print("2. listar campers que aprobaron el examen inicial")
-    print("3. listar trainers activos")
+    print("3. listar trainers activos(TEST)")
     print("4. campers con bajo rendimiento")
     print("5. campers y trainers por ruta")
     print("6. resultados por módulo")
