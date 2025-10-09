@@ -1,32 +1,18 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "ruta": "NodeJs",
         "descripcion": "Curso de NodeJs"
     },
     {
-        "id": 2,
+        "id": "2",
         "ruta": "Java",
         "descripcion": "Curso de Java"
     },
     {
-        "id": 3,
+        "id": "3",
         "ruta": "NetCore",
         "descripcion": "Curso de NetCore"
-    },
-    {
-        "id": "4",
-        "ruta": "fundamentos de programacion",
-        "descripcion": "bases de programacion"
-    },
-    {
-        "id": "5",
-        "ruta": "programacion web",
-        "descripcion": "HTML,CSS y BOOTSTRAP"
-    },
-    {
-        "id": "6",
-        "ruta": "programacion formal",
-        "descripcion": "java, javascript y c#"
     }
+
 ]
