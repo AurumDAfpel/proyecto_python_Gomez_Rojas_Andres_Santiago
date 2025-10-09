@@ -1,45 +1,25 @@
 [
     {
-        "id": "001",
+        "id": "123",
         "nombre": "andres",
         "apellidos": "gomez",
-        "direccion": "xd",
-        "acudiente": "nose",
-        "telefono_celular": "1000",
-        "telefono_fijo": "10000",
-        "estado": "En proceso de ingreso",
-        "riesgo": "N/A",
-        "rol": "camper",
-        "rutas": [
-            {
-                "id": 2,
-                "ruta": "Java",
-                "descripcion": "Curso de Java"
-            }
-        ],
-        "tareas": [
-            ""
-        ]
-    },
-    {
-        "id": "002",
-        "nombre": "kata",
-        "apellidos": "gomez",
-        "direccion": "nose",
-        "acudiente": "+18",
-        "telefono_celular": "si",
-        "telefono_fijo": "a",
+        "direccion": "123",
+        "acudiente": "123",
+        "telefono_celular": "123",
+        "telefono_fijo": "123",
         "estado": "inscrito",
         "riesgo": "bajo",
-        "rol": "camper"
+        "rol": "camper",
+        "ruta": "java"
     },
     {
-        "id": "001",
-        "nombre": "miku",
-        "apellidos": "hatsune",
+        "id": "321",
+        "nombre": "aurm",
+        "apellidos": "afpl",
         "especialidad": "java",
-        "telefono_celular": "10921",
-        "telefono_fijo": "312",
-        "rol": "trainer"
+        "telefono_celular": "123",
+        "telefono_fijo": "123",
+        "rol": "trainer",
+        "ruta": "java"
     }
 ]

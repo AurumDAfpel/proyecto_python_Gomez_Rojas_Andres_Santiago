@@ -23,13 +23,11 @@ def cargar_notas():
 
 def menuTrainers():
     print("\n--- Menú Trainers ---")
-    print("1. administrar notas")
-    print("2. asignar tareas")
-    print("3. ruta y campers asignados")
-    print("4. administrar evaluaciones")
-    print("5. ver rutas ")
-    print("6. revisar promedio")
-    print("7.salir")
+    print("1. asignar tareas")
+    print("2. ruta y campers asignados")
+    print("3. administrar evaluaciones")
+    print("4. revisar promedio")
+    print("5. salir")
     return input("Seleccione una opción: ")
 
 def verPromedios():
@@ -39,6 +37,7 @@ def verPromedios():
     if not notas:
         print("\n No hay notas registradas todavía.")
         return
+    
 
     print("\n--- Promedios de Campers ---")
     for camper_id, lista_notas in notas.items():
@@ -56,29 +55,6 @@ def verPromedios():
         print(f"\n {nombre}")
         print(f"Notas: {notas_flotantes}")
         print(f"Promedio: {promedio:.2f} | Estado: {estado}")
-
-def administrarNotas(usuarios): 
-    limpiar_pantalla()
-    notas = cargar_notas()
-    print("\n--- Administrar Notas ---")
-    for i, usuario in enumerate(usuarios, 1):
-        print(f"{i}. {usuario['nombre']} {usuario['apellidos']}")
-    seleccion = int(input("Seleccione el número del camper para administrar notas: ")) - 1
-    if 0 <= seleccion < len(usuarios):
-        camper = usuarios[seleccion]
-        camper_id = f"{camper['nombre']}_{camper['apellidos']}".replace(" ", "_").lower()
-        print(f"\nCamper seleccionado: {camper['nombre']} {camper['apellidos']}")
-        print("Notas actuales:", notas.get(camper_id, []))
-        nueva_nota = input("Ingrese la nueva nota (o 'salir' para regresar): ")
-        if nueva_nota.lower() != 'salir':
-            if camper_id not in notas:
-                notas[camper_id] = []
-            notas[camper_id].append(nueva_nota)
-            with open(ruta_notas, "w", encoding="utf-8") as archivo:
-                json.dump(notas, archivo, indent=4)
-            print("Nota agregada con éxito.")
-    else:
-        print("Selección inválida.")
 
 def asignarTareas(usuarios):
     print("\n--- Asignar Tareas ---")
@@ -154,24 +130,22 @@ if __name__ == "__main__":
         limpiar_pantalla(2)
         opcion = menuTrainers()
         if opcion == "1":
-            administrarNotas(usuarios)
-            limpiar_pantalla(2)
-        elif opcion == "2":
             asignarTareas(usuarios)
-            limpiar_pantalla(2)
-        elif opcion == "3":
+            limpiar_pantalla()
+            input("Presiona ENTER para continuar...")
+        elif opcion == "2":
             rutaYCampersAsignados(usuarios)
-            limpiar_pantalla(2)
-        elif opcion =="4":
+            limpiar_pantalla()
+            input("Presiona ENTER para continuar...")
+        elif opcion =="3":
             administrarEvaluaciones(usuarios)
-            limpiar_pantalla(2)
-        elif opcion == "5":
-            verRutas()
-            limpiar_pantalla(2)
-        elif opcion == "6":
+            limpiar_pantalla()
+            input("Presiona ENTER para continuar...")
+        elif opcion == "4":
             verPromedios()
-            limpiar_pantalla(2)
-        elif opcion == "7":
+            input("Presiona ENTER para continuar...")
+            limpiar_pantalla()
+        elif opcion == "5":
             print("Saliendo del sistema...")
             break
         else:

@@ -1,0 +1,13 @@
+{
+    "grupos": [
+        {
+            "nombre": "A1",
+            "campers": [
+                "andres gomez"
+            ],
+            "trainers":[
+                "aurm afpl"
+            ]
+        }
+    ]
+}

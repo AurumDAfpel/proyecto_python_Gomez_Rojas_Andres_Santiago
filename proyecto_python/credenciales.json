@@ -17,7 +17,14 @@
         "nombre": "esteban",
         "password": "123",
         "estado": "activo",
-        "riesgo": "N/A",
+        "riesgo": "bajo",
         "rol": "camper"
+    },
+    {
+        "nombre": "",
+        "password": "",
+        "estado": "activo",
+        "riesgo": "N/A",
+        "rol": "admin"
     }
 ]
